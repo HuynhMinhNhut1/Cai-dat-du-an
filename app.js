@@ -10,7 +10,7 @@ app.use("/api/contacts", contactsRouter);
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to contact book application." });
 });
-
+module.exports = app;
 const ApiError = require("./app/api-error");
 
 app.use("/api/contacts", contactsRouter);
@@ -31,4 +31,3 @@ app.use((error, req, res) => {
   });
 });
 
-module.exports = app;
